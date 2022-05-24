@@ -1,9 +1,9 @@
 /*
- * @file 		Bank_program.c
- * @author 		Ali El_bana (alitheboss922@gmail.com)
+ * @file 	Bank_program.c
+ * @author 	Ali El_bana (alitheboss922@gmail.com)
  * @brief 
  * @version 	0.1
- * @date 		2022-04-17
+ * @date 	2022-04-17
  * 
  * @copyright 	Copyright (c) 2022
  * 
