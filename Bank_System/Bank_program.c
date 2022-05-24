@@ -25,29 +25,29 @@
 
 
 
-int 					accounts_nums  				= Initialized_by_Zero ; // Is a variable for the number of accounts you want to create.
+int 			accounts_nums  			= Initialized_by_Zero ; // Is a variable for the number of accounts you want to create.
 
-int 					OpenExistingAccount_flag 	= Initialized_by_Zero ; // Is a flag for the open account.
+int 			OpenExistingAccount_flag 	= Initialized_by_Zero ; // Is a flag for the open account.
 
-int 					makeTransaction_flag 		= Initialized_by_Zero ; // Is a flag for the correct transfered account bank_ID.
+int 			makeTransaction_flag 		= Initialized_by_Zero ; // Is a flag for the correct transfered account bank_ID.
 
-unsigned long long int 	open_bank_ID 				= Initialized_by_Zero ; // Is a variable for open account ID.
+unsigned long long int 	open_bank_ID 			= Initialized_by_Zero ; // Is a variable for open account ID.
 
-unsigned long long int 	transfered_bank_ID 			= Initialized_by_Zero ; // Is a variable for transfered account ID.
+unsigned long long int 	transfered_bank_ID 		= Initialized_by_Zero ; // Is a variable for transfered account ID.
 
-int 					open_account_activation 	= Initialized_by_Zero ; // Is a variable for checking the status of the open account.
+int 			open_account_activation 	= Initialized_by_Zero ; // Is a variable for checking the status of the open account.
 
-int 					active_accounts_checking	= Initialized_by_Zero ; // Is a variable for checking the status of the bank accounts.
+int 			active_accounts_checking	= Initialized_by_Zero ; // Is a variable for checking the status of the bank accounts.
 
-int						clientWindow_flag			= Initialized_by_Zero ; // Is a flag for the correct client bank_ID and password.
+int			clientWindow_flag		= Initialized_by_Zero ; // Is a flag for the correct client bank_ID and password.
 	
-unsigned long long int	client_bank_ID				= Initialized_by_Zero ; // Is a variable for scaning the bank account_ID of the client.
+unsigned long long int	client_bank_ID			= Initialized_by_Zero ; // Is a variable for scaning the bank account_ID of the client.
 
-unsigned long long int 	client_password				= Initialized_by_Zero ; // Is a variable for scaning the bank account password of the client.
+unsigned long long int 	client_password			= Initialized_by_Zero ; // Is a variable for scaning the bank account password of the client.
 
-int 					client_MakeTransaction_flag = Initialized_by_Zero ; // Is a flag for the correct transfered account bank_ID.
+int 			client_MakeTransaction_flag 	= Initialized_by_Zero ; // Is a flag for the correct transfered account bank_ID.
 
-int 					old_Password_flag			= Initialized_by_Zero ; // Is a flag for the correct client account password.
+int 			old_Password_flag		= Initialized_by_Zero ; // Is a flag for the correct client account password.
 
 unsigned long long int 	old_AccountPassword 		= Initialized_by_Zero ; // Is a variable for the old account password. 
 
@@ -57,28 +57,28 @@ unsigned long long int 	old_AccountPassword 		= Initialized_by_Zero ; // Is a va
 typedef struct
 {
 	
-	char 					name[ Max_name_chars ]   			;	// Is a string for the name of the client.
+	char 			name[ Max_name_chars ]   		;	// Is a string for the name of the client.
 	
-	string 					address 							;	// Is a string for the address of the client.
+	string 			address 				;	// Is a string for the address of the client.
 	
-	char 					account_status[ Max_Status_chars ]	;	// Is a string for the account status of the client(Active,Restricted or Closed).
+	char 			account_status[ Max_Status_chars ]	;	// Is a string for the account status of the client(Active,Restricted or Closed).
 	
 	
 	// In case of user is less than 21 he must have a guardian.
-	char 					guardian_name[ Max_name_chars ]		;	// Is a string for the guardian name of the client.
+	char 			guardian_name[ Max_name_chars ]		;	// Is a string for the guardian name of the client.
 	
-	unsigned long long int 	guardian_NationalID					;	// Is a variable for the guardian national_ID of the client.
+	unsigned long long int 	guardian_NationalID			;	// Is a variable for the guardian national_ID of the client.
 
 
- 	unsigned long long int 	national_ID 						;	// Is a variable for the national_ID of the client.
+ 	unsigned long long int 	national_ID 				;	// Is a variable for the national_ID of the client.
 	
-	unsigned long long int 	bank_account_ID						;	// Is a variable for the bank_account_ID of the client.
+	unsigned long long int 	bank_account_ID				;	// Is a variable for the bank_account_ID of the client.
 	
-	unsigned long long int 	balance 							;	// Is a variable for the balance (money) of the client.
+	unsigned long long int 	balance 				;	// Is a variable for the balance (money) of the client.
  
-	unsigned long long int 	password							;	// Is a variable for a password of the client.
+	unsigned long long int 	password				;	// Is a variable for a password of the client.
  
-	unsigned char 			age        							;	// Is a variable for the age of the client.
+	unsigned char 		age        				;	// Is a variable for the age of the client.
 	
 	
 	
@@ -112,7 +112,7 @@ void vDisp_mainWindow( void )
 {
 
 
-	printf("+===========================================================================================+\n")   ;
+    printf("+===========================================================================================+\n")   ;
     printf("|                               Welcome to my \"Bank system\"                                 |\n") ;
     printf("+===========================================================================================+\n")   ;
     printf("| 1 | Admin window                                                                          |\n")   ;
@@ -136,9 +136,9 @@ void vDisp_mainWindow( void )
 
 
 /*
- * @Function  name 		:	vAdmin_windowFeatures( ).
+ * @Function  name 	:	vAdmin_windowFeatures( ).
  * @Function  info. 	:	Select the features of the Admin window. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -227,9 +227,9 @@ void vAdmin_windowFeatures( void )
 
 
 /*
- * @Function  name 		:	vAdminPass_Check3times( int admin_pass ).
+ * @Function  name 	:	vAdminPass_Check3times( int admin_pass ).
  * @Function  info. 	:	Give two more tries to the Admin to enter the correct username and password. 
- * @Function  input		:	The Admin username and Password and the result of the strcmp of the names.
+ * @Function  input	:	The Admin username and Password and the result of the strcmp of the names.
  * @@Function return	:	None.
  * 
  */
@@ -321,9 +321,9 @@ void vAdminUsername_and_Pass_Check3times( string admin_name , int admin_pass , i
 
 
 /*
- * @Function  name 		:	vCreate_New_Account( ).
+ * @Function  name 	:	vCreate_New_Account( ).
  * @Function  info. 	:	Create bank_accounts. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -331,23 +331,23 @@ void vCreate_New_Account( void )
 {
 	
 	
-	int i 							= Iteration_start		; // Is a variable for the first iteration.
+	int i 					= Iteration_start	; // Is a variable for the first iteration.
 
-	int j 							= Iteration_start		; // Is a variable for the second iteration.
+	int j 					= Iteration_start	; // Is a variable for the second iteration.
 	
 	int national_ID_digits			= Initialized_by_Zero	; // Is a variable for counting the number of digits of the national_ID.
 	
-	int guardian_national_ID_digits = Initialized_by_Zero	; // Is a variable for counting the number of digits of the guardian national_ID.
+	int guardian_national_ID_digits 	= Initialized_by_Zero	; // Is a variable for counting the number of digits of the guardian national_ID.
 	
-	int name_alphabet				= Initialized_by_Zero	; // Is a counter for the letters in a string.
+	int name_alphabet			= Initialized_by_Zero	; // Is a counter for the letters in a string.
 	
-	int name_nums 					= Initialized_by_Zero	; // Is a counter for the numbers in a string.
+	int name_nums 				= Initialized_by_Zero	; // Is a counter for the numbers in a string.
 	
 	int name_special_char			= Initialized_by_Zero	; // Is a counter for the special characters in a string.
 	
-	int spaces_in_name				= Initialized_by_Zero	; // Is a counter for the spaces between every name.
+	int spaces_in_name			= Initialized_by_Zero	; // Is a counter for the spaces between every name.
 	
-	int s							= Initialized_by_Zero	; // Is a counter for the input characters in the name.
+	int s					= Initialized_by_Zero	; // Is a counter for the input characters in the name.
 	
 	
 	
@@ -365,7 +365,7 @@ void vCreate_New_Account( void )
 	for ( i = Iteration_start ; i< accounts_nums ; i++ ) 
 	{ 	
 
-		national_ID_digits			= Initialized_by_Zero ; // Empty the counter to count the new ID again.
+		national_ID_digits  = Initialized_by_Zero ; // Empty the counter to count the new ID again.
         
         guardian_national_ID_digits = Initialized_by_Zero ; // Empty the counter to count the new ID again.
 		
@@ -1133,9 +1133,9 @@ void vCreate_New_Account( void )
 
 
 /*
- * @Function  name 		:	vOpen_ExistingAccount( ).
+ * @Function  name 	:	vOpen_ExistingAccount( ).
  * @Function  info. 	:	Open the existing accounts and make operations. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -1223,9 +1223,9 @@ void vOpen_ExistingAccount( void )
 
 
 /*
- * @Function  name 		:	vOpen_ExistingAccount_Menu( ).
+ * @Function  name 	:	vOpen_ExistingAccount_Menu( ).
  * @Function  info. 	:	Select the features of the Open Existing Account Menu.
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -1295,7 +1295,7 @@ void vOpen_ExistingAccount_Menu( void )
     		case Change_Account_Status	:	vChange_Account_Status( )	;	break;
 			
 			// The choice number 3 is Get Cash.
-    		case Get_Cash 				:	vGet_Cash( )				;	break;
+    		case Get_Cash 			:	vGet_Cash( )			;	break;
 			
 			// The choice number 4 is Deposit in Account.
     		case Deposit_in_Account 	:	vDeposit_in_Account( )		;	break;
@@ -1328,9 +1328,9 @@ void vOpen_ExistingAccount_Menu( void )
 
 
 /*
- * @Function  name 		:	vOpen_ExistingAccount_Flag_Check3times( Open_ExistingAccount_flag ).
+ * @Function  name 	:	vOpen_ExistingAccount_Flag_Check3times( Open_ExistingAccount_flag ).
  * @Function  info. 	:	Give two more tries to the Admin to enter an existent bank account_ID. 
- * @Function  input		:	Open_ExistingAccount_flag.
+ * @Function  input	:	Open_ExistingAccount_flag.
  * @@Function return	:	None.
  * 
  */
@@ -1430,18 +1430,18 @@ void vOpen_ExistingAccount_Flag_Check3times( int OpenExistingAccount_flag )
 /****************************************************************************************************************************************/
 
 /*
- * @Function  name 		:	vMake_Transaction( ).
+ * @Function  name 	:	vMake_Transaction( ).
  * @Function  info. 	:	Transfaring amount of money from one account to another. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
 void vMake_Transaction( void )
 {
 	
-	int i 								= Iteration_start 		; // Is a variable for the first iteration.
+	int i 					= Iteration_start 	; // Is a variable for the first iteration.
 	
-	int amount_of_money 				= Initialized_by_Zero 	; // Is a variable for scaning the amount of money to be transfered.		
+	int amount_of_money 			= Initialized_by_Zero 	; // Is a variable for scaning the amount of money to be transfered.		
 	
 	int transfered_account_activation	= Initialized_by_Zero	; // Is a variable for checking the status of the transfered account.
 
@@ -1584,9 +1584,9 @@ void vMake_Transaction( void )
 
 
 /*
- * @Function  name 		:	vMake_Transaction_Flag_Check3times( MakeTransaction_flag ).
+ * @Function  name 	:	vMake_Transaction_Flag_Check3times( MakeTransaction_flag ).
  * @Function  info. 	:	Give two more tries to the Admin to enter an existent bank account_ID. 
- * @Function  input		:	Make_Transaction_flag.
+ * @Function  input	:	Make_Transaction_flag.
  * @@Function return	:	None.
  * 
  */
@@ -1598,7 +1598,7 @@ void vMake_Transaction_Flag_Check3times( int makeTransaction_flag )
 	int j = Iteration_start ; // Is a variable for the first iteration.
 	
 	// Give him two more tries to enter an existent bank account_ID.
-	for ( j = Iteration_start ; j< Twice ; j++ )
+	for ( j = Iteration_start ; j < Twice ; j++ )
 	{
 		
 		printf("\nNot found, Try again\n");
@@ -1641,7 +1641,7 @@ void vMake_Transaction_Flag_Check3times( int makeTransaction_flag )
 		{	
 	
 	
-			int amount_of_money 				= Initialized_by_Zero 	; // Is a variable for scaning the amount of money to be transfered.		
+			int amount_of_money 			= Initialized_by_Zero 	; // Is a variable for scaning the amount of money to be transfered.		
 	
 			int transfered_account_activation	= Initialized_by_Zero	; // Is a variable for checking the status of the transfered account.
 	
@@ -1650,10 +1650,10 @@ void vMake_Transaction_Flag_Check3times( int makeTransaction_flag )
 			open_account_activation 		= strcmp( bank_account[OpenExistingAccount_flag].account_status 	, "Active" ) 	; 
 			
 			// if the transfered account is active return 0.
-			transfered_account_activation	= strcmp( bank_account[makeTransaction_flag].account_status 		, "Active" )	;
+			transfered_account_activation		= strcmp( bank_account[makeTransaction_flag].account_status 		, "Active" )	;
 			
 			// if the both accounts is active equal 0.
-			active_accounts_checking 		= open_account_activation & transfered_account_activation 							;
+			active_accounts_checking 		= open_account_activation & transfered_account_activation 				;
 			
 			
 			// Check if the both accounts is active equal 0.
@@ -1672,13 +1672,13 @@ void vMake_Transaction_Flag_Check3times( int makeTransaction_flag )
 					bank_account[OpenExistingAccount_flag].bank_account_ID	= 	open_bank_ID 		;
 					
 					// Assign the transfered_bank_ID that has been entered to the client bank_ID, who the money will be transfered to.
-					bank_account[makeTransaction_flag].bank_account_ID 		= 	transfered_bank_ID 	;
+					bank_account[makeTransaction_flag].bank_account_ID 	= 	transfered_bank_ID 	;
 					
 					// Substracting the amount of money that will be transfered from the client account, who wants to transact the money. 
 					bank_account[OpenExistingAccount_flag].balance 	    	-= 	amount_of_money 	;
 					
 					// Adding the amount of money that will be transfered to the client account, who the money will be transfered to.
-					bank_account[makeTransaction_flag].balance 				+= 	amount_of_money 	;
+					bank_account[makeTransaction_flag].balance 		+= 	amount_of_money 	;
 					
 				}
 				
@@ -1751,9 +1751,9 @@ void vMake_Transaction_Flag_Check3times( int makeTransaction_flag )
 
 
 /*
- * @Function  name 		:	vChange_Account_Status( ).
+ * @Function  name 	:	vChange_Account_Status( ).
  * @Function  info. 	:	Change Bank Account Status. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -1812,7 +1812,7 @@ void vChange_Account_Status( void )
 		case Active_State  		:	strcpy( bank_account[OpenExistingAccount_flag].account_status , "Active" )		;	break;
 		
 		// The choice number 2 is Set Account to Restricted State.
-		case Restricted_State	:	strcpy( bank_account[OpenExistingAccount_flag].account_status , "Restricted" )	;	break;
+		case Restricted_State		:	strcpy( bank_account[OpenExistingAccount_flag].account_status , "Restricted" )	;	break;
 		
 		// The choice number 3 is Set Account to Closed State.
 		case Closed_State 		:	strcpy( bank_account[OpenExistingAccount_flag].account_status , "Closed" )		;	break;
@@ -1834,9 +1834,9 @@ void vChange_Account_Status( void )
 /****************************************************************************************************************************************/
 
 /*
- * @Function  name 		:	vGet_Cash( ).
+ * @Function  name 	:	vGet_Cash( ).
  * @Function  info. 	:	Get cash from a bank account. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -1924,9 +1924,9 @@ void vGet_Cash( void )
 
 
 /*
- * @Function  name 		:	vDeposit_in_Account( ).
+ * @Function  name 	:	vDeposit_in_Account( ).
  * @Function  info. 	:	Add cash to a bank account. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -1994,9 +1994,9 @@ void vDeposit_in_Account( void )
 
 
 /*
- * @Function  name 		:	vClient_windowFeatures( ).
+ * @Function  name 	:	vClient_windowFeatures( ).
  * @Function  info. 	:	Select the features of the client window. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -2006,12 +2006,12 @@ void vClient_windowFeatures( void )
 	
 	int select_ClientFeatures	= Initialized_by_Zero 	; // Is a variable for scaning the feature number.
 
-	int i 						= Iteration_start 		; // Is a variable for the first iteration.
+	int i 				= Iteration_start 	; // Is a variable for the first iteration.
 	
 	
 	
 	// To scan the bank account_ID.
-	client_bank_ID 		= get_long_long("\nEnter the bank account_ID of the client account: ")			;
+	client_bank_ID 		= get_long_long("\nEnter the bank account_ID of the client account: ")		;
 	
 	// To scan the bank account password.
 	client_password		= get_long_long("\nEnter the bank account password of the client account: ")	;
@@ -2109,13 +2109,13 @@ void vClient_windowFeatures( void )
 			
 			
 				// The choice number 1 is Make Transaction.
-				case Client_Make_Transaction  	:	vClient_Make_Transaction( )		;	break;
+				case Client_Make_Transaction  	:	vClient_Make_Transaction( )	;	break;
 				
 				// The choice number 2 is Change Account password.
-				case Change_Account_Password	:	vChange_Account_Password( )		;	break;
+				case Change_Account_Password	:	vChange_Account_Password( )	;	break;
 				
 				// The choice number 3 is Get Cash.
-				case Client_Get_Cash 			:	vClient_Get_Cash( )				;	break;
+				case Client_Get_Cash 		:	vClient_Get_Cash( )		;	break;
 				
 				// The choice number 4 is Deposit in Account.
 				case Client_Deposit_in_Account 	:	vClient_Deposit_in_Account( )	;	break;
@@ -2166,9 +2166,9 @@ void vClient_windowFeatures( void )
 
 
 /*
- * @Function  name 		:	vClientWindow_Flag_Check3times( int clientWindow_flag ).
+ * @Function  name 	:	vClientWindow_Flag_Check3times( int clientWindow_flag ).
  * @Function  info. 	:	Give two more tries to the Client to enter an existent bank account_ID and password. 
- * @Function  input		:	clientWindow_flag.
+ * @Function  input	:	clientWindow_flag.
  * @@Function return	:	None.
  * 
  *
@@ -2190,7 +2190,7 @@ void vClientWindow_Flag_Check3times( int clientWindow_flag )
 		printf("\nNot found, Try again\n");
 	    
 		// To scan the bank account_ID.
-		client_bank_ID = get_long_long("\nEnter the bank account_ID of the client account: ")			;
+		client_bank_ID = get_long_long("\nEnter the bank account_ID of the client account: ")		;
 		
 		// To scan the bank account password.
 		client_password	= get_long_long("\nEnter the bank account password of the client account: ")	;
@@ -2358,9 +2358,9 @@ void vClientWindow_Flag_Check3times( int clientWindow_flag )
 
 
 /*
- * @Function  name 		:	vClient_Make_Transaction( ).
+ * @Function  name 	:	vClient_Make_Transaction( ).
  * @Function  info. 	:	Transfaring amount of money from one account to another. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -2369,9 +2369,9 @@ void vClient_Make_Transaction( void )
 	
 	
 	
-	int i 								= Iteration_start 		; // Is a variable for the first iteration.
+	int i 					= Iteration_start 	; // Is a variable for the first iteration.
 	
-	int amount_of_money 				= Initialized_by_Zero 	; // Is a variable for scaning the amount of money to be transfered.		
+	int amount_of_money 			= Initialized_by_Zero 	; // Is a variable for scaning the amount of money to be transfered.		
 	
 	int transfered_account_activation	= Initialized_by_Zero	; // Is a variable for checking the status of the transfered account.
 
@@ -2424,13 +2424,13 @@ void vClient_Make_Transaction( void )
 	
 		
 		// if the open account is active return 0.
-		open_account_activation 		= strcmp( bank_account[clientWindow_flag].account_status 	, "Active" ) 			; 
+		open_account_activation 	= strcmp( bank_account[clientWindow_flag].account_status 	, "Active" ) 	; 
 		
 		// if the transfered account is active return 0.
-		transfered_account_activation	= strcmp( bank_account[client_MakeTransaction_flag].account_status 	, "Active" )	;
+		transfered_account_activation	= strcmp( bank_account[client_MakeTransaction_flag].account_status , "Active" )	;
 		
 		// if the both accounts is active equal 0.
-		active_accounts_checking 		= open_account_activation & transfered_account_activation 							;
+		active_accounts_checking 	= open_account_activation & transfered_account_activation 			;
 		
 		// Check if the both accounts is active equal 0.
 		if( Equal_strings == active_accounts_checking )
@@ -2446,16 +2446,16 @@ void vClient_Make_Transaction( void )
 			{
 				
 				// Assign the Client bank_ID that has been entered to the client bank_ID, who wants to transact the money.			
-				bank_account[clientWindow_flag].bank_account_ID				= 	client_bank_ID 		;
+				bank_account[clientWindow_flag].bank_account_ID			= 	client_bank_ID 		;
 				
 				// Assign the transfered_bank_ID that has been entered to the client bank_ID, who the money will be transfered to.
 				bank_account[client_MakeTransaction_flag].bank_account_ID	= 	transfered_bank_ID 	;
 				
 				// Substracting the amount of money that will be transfered from the client account, who wants to transact the money. 
-				bank_account[clientWindow_flag].balance 	    			-= 	amount_of_money 	;
+				bank_account[clientWindow_flag].balance 	    		-= 	amount_of_money 	;
 				
 				// Adding the amount of money that will be transfered to the client account, who the money will be transfered to.
-				bank_account[client_MakeTransaction_flag].balance 			+= 	amount_of_money 	;
+				bank_account[client_MakeTransaction_flag].balance 		+= 	amount_of_money 	;
 				
 				
 			}
@@ -2514,9 +2514,9 @@ void vClient_Make_Transaction( void )
 
 
 /*
- * @Function  name 		:	vClient_Make_Transaction_Flag_Check3times( client_MakeTransaction_flag ).
+ * @Function  name 	:	vClient_Make_Transaction_Flag_Check3times( client_MakeTransaction_flag ).
  * @Function  info. 	:	Give two more tries to the Client to enter an existent bank account_ID. 
- * @Function  input		:	Make_Transaction_flag.
+ * @Function  input	:	Make_Transaction_flag.
  * @@Function return	:	None.
  * 
  */
@@ -2601,16 +2601,16 @@ void vClient_Make_Transaction_Flag_Check3times( int client_MakeTransaction_flag 
 				{
 					
 					// Assign the Client bank_ID that has been entered to the client bank_ID, who wants to transact the money.			
-					bank_account[clientWindow_flag].bank_account_ID				= 	client_bank_ID 		;
+					bank_account[clientWindow_flag].bank_account_ID			= 	client_bank_ID 		;
 					
 					// Assign the transfered_bank_ID that has been entered to the client bank_ID, who the money will be transfered to.
 					bank_account[client_MakeTransaction_flag].bank_account_ID	= 	transfered_bank_ID 	;
 					
 					// Substracting the amount of money that will be transfered from the client account, who wants to transact the money. 
-					bank_account[clientWindow_flag].balance 	    			-= 	amount_of_money 	;
+					bank_account[clientWindow_flag].balance 	    		-= 	amount_of_money 	;
 					
 					// Adding the amount of money that will be transfered to the client account, who the money will be transfered to.
-					bank_account[client_MakeTransaction_flag].balance 			+= 	amount_of_money 	;
+					bank_account[client_MakeTransaction_flag].balance 		+= 	amount_of_money 	;
 					
 					
 				}
@@ -2682,9 +2682,9 @@ void vClient_Make_Transaction_Flag_Check3times( int client_MakeTransaction_flag 
 
 
 /*
- * @Function  name 		:	vChange_Account_Password( ).
+ * @Function  name 	:	vChange_Account_Password( ).
  * @Function  info. 	:	Change Bank Account Password. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -2692,9 +2692,9 @@ void vChange_Account_Password( void )
 {
 	
 	
-	unsigned long long int 	new_AccountPassword = Initialized_by_Zero 	; // Is a variable for the old account password.
+	unsigned long long int 	new_AccountPassword 	= Initialized_by_Zero 	; // Is a variable for the old account password.
 	
-	int 					i 					= Iteration_start 		; // Is a variable for the first iteration.
+	int 			i 			= Iteration_start 	; // Is a variable for the first iteration.
 	
 	
 
@@ -2792,9 +2792,9 @@ void vChange_Account_Password( void )
 
 
 /*
- * @Function  name 		:	vOld_Password_Flag_Check3times( old_Password_flag ).
+ * @Function  name 	:	vOld_Password_Flag_Check3times( old_Password_flag ).
  * @Function  info. 	:	Give two more tries to the Client to enter an existent bank account password. 
- * @Function  input		:	old_Password_flag.
+ * @Function  input	:	old_Password_flag.
  * @@Function return	:	None.
  * 
  */
@@ -2920,9 +2920,9 @@ void vOld_Password_Flag_Check3times( int old_Password_flag )
 
 
 /*
- * @Function  name 		:	vClient_Get_Cash( ).
+ * @Function  name 	:	vClient_Get_Cash( ).
  * @Function  info. 	:	Get cash from a bank account. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
@@ -2999,9 +2999,9 @@ void vClient_Get_Cash( void )
 
 
 /*
- * @Function  name 		:	vClient_Deposit_in_Account( ).
+ * @Function  name 	:	vClient_Deposit_in_Account( ).
  * @Function  info. 	:	Add cash to a bank account. 
- * @Function  input		:	None.
+ * @Function  input	:	None.
  * @@Function return	:	None.
  * 
  */
