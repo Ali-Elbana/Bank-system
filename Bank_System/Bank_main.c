@@ -45,9 +45,9 @@ void main ( void )
 	
 	int 	admin_pass    		=  	Initialized_by_Zero  	;	// Is a variable for taking a password from the admin.
 	
-	string 	admin_name 		=  	NULL 					; 	// Is a string for taking the user name of the admin.
+	string 	admin_name 		=  	NULL 			; 	// Is a string for taking the user name of the admin.
 	
-	int 	check_admin_name	=	Initialized_by_Zero		;	// Is a varaible to check on the admin username (if correct = 0) (else =1).		
+	int 	check_admin_name	=	Initialized_by_Zero	;	// Is a varaible to check on the admin username (if correct = 0) (else =1).		
 	
 	
 	
