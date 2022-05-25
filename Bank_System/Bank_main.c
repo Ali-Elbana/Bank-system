@@ -1,9 +1,9 @@
 /*
- * @file 		Bank_main.c
- * @author 		Ali El_bana (alitheboss922@gmail.com)
+ * @file 	Bank_main.c
+ * @author 	Ali El_bana (alitheboss922@gmail.com)
  * @brief 
  * @version 	0.1
- * @date 		2022-04-17
+ * @date 	2022-04-17
  * 
  * @copyright 	Copyright (c) 2022
  * 
@@ -45,7 +45,7 @@ void main ( void )
 	
 	int 	admin_pass    		=  	Initialized_by_Zero  	;	// Is a variable for taking a password from the admin.
 	
-	string 	admin_name 			=  	NULL 					; 	// Is a string for taking the user name of the admin.
+	string 	admin_name 		=  	NULL 					; 	// Is a string for taking the user name of the admin.
 	
 	int 	check_admin_name	=	Initialized_by_Zero		;	// Is a varaible to check on the admin username (if correct = 0) (else =1).		
 	
@@ -167,7 +167,7 @@ void main ( void )
 			case Exit:
 			
 			
-			printf("\n\nThe program has been implemented\n")		;
+			printf("\n\nThe program has been implemented\n")	;
 			
 			printf("\nYou now signed out from the Bank System\n") 	;
 			
